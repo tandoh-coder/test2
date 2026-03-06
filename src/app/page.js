@@ -285,15 +285,43 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Direct message - typewriter */}
+            {/* Direct message - typewriter, expanded */}
             <div className="fade-up-5 glow-card" style={{ border: "1px solid #c084fc44", background: "rgba(192,132,252,0.05)", borderRadius: 8, padding: "24px 22px", marginBottom: 16, position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, transparent, #c084fc66, transparent)" }} />
               <div style={{ fontSize: 10, color: "#c084fc66", letterSpacing: "0.25em", marginBottom: 14 }}>◆ AIからあなたへ</div>
-              <div style={{ fontSize: 15, color: "#e2e8f0", lineHeight: 2, fontWeight: 300, letterSpacing: "0.05em" }}>
+              <div style={{ fontSize: 14, color: "#e2e8f0", lineHeight: 2.1, fontWeight: 300, letterSpacing: "0.04em" }}>
                 {typedMessage}
                 <span style={{ animation: "blink 0.8s step-end infinite", color: "#c084fc" }}>|</span>
               </div>
             </div>
+
+            {/* Critics */}
+            {result.critics?.length > 0 && (
+              <div style={{ border: "1px solid #818cf822", background: "rgba(0,0,0,0.3)", borderRadius: 8, padding: "20px", marginBottom: 16, opacity: 0, animation: "fadeUp 0.6s ease 0.6s forwards" }}>
+                <div style={{ fontSize: 10, color: "#818cf866", letterSpacing: "0.2em", marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
+                  🎓 専門家の見解
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                  {result.critics.map((c, i) => {
+                    const colors = ["#c084fc", "#818cf8", "#67e8f9"];
+                    return (
+                      <div key={i} style={{ opacity: 0, animation: `fadeUp 0.4s ease ${0.7 + i * 0.15}s forwards`, background: `rgba(${i === 0 ? "192,132,252" : i === 1 ? "129,140,248" : "103,232,249"},0.04)`, border: `1px solid ${colors[i]}22`, borderLeft: `3px solid ${colors[i]}55`, borderRadius: 6, padding: "14px 16px" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                          <span style={{ fontSize: 16 }}>{"🧠📚🔬"[i]}</span>
+                          <div>
+                            <div style={{ fontSize: 13, fontWeight: 700, color: colors[i] }}>{c.name}</div>
+                            <div style={{ fontSize: 10, color: "#ffffff33", marginTop: 1 }}>{c.role}</div>
+                          </div>
+                        </div>
+                        <div style={{ fontSize: 13, color: "#ffffffaa", lineHeight: 1.9, paddingLeft: 28 }}>
+                          {c.comment}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Share */}
             <button
