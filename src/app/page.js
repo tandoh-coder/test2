@@ -308,10 +308,7 @@ export default function Home() {
                       <div key={i} style={{ opacity: 0, animation: `fadeUp 0.4s ease ${0.7 + i * 0.15}s forwards`, background: `rgba(${i === 0 ? "192,132,252" : i === 1 ? "129,140,248" : "103,232,249"},0.04)`, border: `1px solid ${colors[i]}22`, borderLeft: `3px solid ${colors[i]}55`, borderRadius: 6, padding: "14px 16px" }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
                           <span style={{ fontSize: 16 }}>{"🧠📚🔬"[i]}</span>
-                          <div>
-                            <div style={{ fontSize: 13, fontWeight: 700, color: colors[i] }}>{c.name}</div>
-                            <div style={{ fontSize: 10, color: "#ffffffdd", marginTop: 1 }}>{c.role}</div>
-                          </div>
+                          <div style={{ fontSize: 13, fontWeight: 700, color: colors[i] }}>{c.role}</div>
                         </div>
                         <div style={{ fontSize: 13, color: "#ffffffdd", lineHeight: 1.9, paddingLeft: 28 }}>
                           {c.comment}
