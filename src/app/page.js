@@ -144,13 +144,13 @@ export default function Home() {
           <div style={{ fontFamily: "'Zen Antique Soft', serif", fontSize: "clamp(22px, 5vw, 38px)", fontWeight: 400, color: "#c084fc", letterSpacing: "0.2em", textShadow: "0 0 30px #c084fc66, 0 0 80px #c084fc22", animation: "pulse 4s ease-in-out infinite", marginBottom: 8 }}>
             深層心理スキャナー
           </div>
-          <div style={{ fontSize: 11, color: "#c084fc44", letterSpacing: "0.3em" }}>DEEP PSYCHOLOGY ANALYSIS SYSTEM</div>
+          <div style={{ fontSize: 11, color: "#c084fcaa", letterSpacing: "0.3em" }}>DEEP PSYCHOLOGY ANALYSIS SYSTEM</div>
           <div style={{ width: 60, height: 1, background: "linear-gradient(90deg, transparent, #c084fc44, transparent)", margin: "16px auto 0" }} />
         </div>
 
         {/* Text input */}
         <div style={{ border: "1px solid #c084fc22", background: "rgba(192,132,252,0.03)", borderRadius: 8, marginBottom: 12 }}>
-          <div style={{ padding: "10px 16px", borderBottom: "1px solid #c084fc15", fontSize: 11, color: "#c084fc66", letterSpacing: "0.15em", display: "flex", alignItems: "center", gap: 8 }}>
+          <div style={{ padding: "10px 16px", borderBottom: "1px solid #c084fc15", fontSize: 11, color: "#c084fcd0", letterSpacing: "0.15em", display: "flex", alignItems: "center", gap: 8 }}>
             <span style={{ color: "#c084fc", fontSize: 8 }}>◆</span>
             分析したいテキストを入力（画像のみの場合は空欄でもOK）
           </div>
@@ -161,7 +161,7 @@ export default function Home() {
             rows={5}
             style={{ width: "100%", background: "transparent", border: "none", color: "#e2e8f0", fontFamily: "'Noto Sans JP', sans-serif", fontSize: 14, lineHeight: 1.9, padding: "16px", resize: "vertical", boxSizing: "border-box", display: "block" }}
           />
-          <div style={{ padding: "6px 16px", borderTop: "1px solid #c084fc0a", fontSize: 10, color: "#ffffff1a", textAlign: "right" }}>{text.length} 文字</div>
+          <div style={{ padding: "6px 16px", borderTop: "1px solid #c084fc0a", fontSize: 10, color: "#ffffff88", textAlign: "right" }}>{text.length} 文字</div>
         </div>
 
         {/* Image upload */}
@@ -183,8 +183,8 @@ export default function Home() {
           ) : (
             <div style={{ padding: "28px 20px", textAlign: "center" }}>
               <div style={{ fontSize: 28, marginBottom: 10 }}>📸</div>
-              <div style={{ fontSize: 13, color: "#c084fc55", marginBottom: 4 }}>スクリーンショットをドラッグ＆ドロップ</div>
-              <div style={{ fontSize: 11, color: "#ffffff22" }}>またはクリックしてファイルを選択　JPG / PNG / WEBP・最大{MAX_IMAGE_MB}MB</div>
+              <div style={{ fontSize: 13, color: "#c084fccc", marginBottom: 4 }}>スクリーンショットをドラッグ＆ドロップ</div>
+              <div style={{ fontSize: 11, color: "#ffffff88" }}>またはクリックしてファイルを選択　JPG / PNG / WEBP・最大{MAX_IMAGE_MB}MB</div>
               <div style={{ fontSize: 11, color: "#c084fc33", marginTop: 8 }}>Instagram・X・LINEなどのスクリーンショットに対応</div>
             </div>
           )}
@@ -223,7 +223,7 @@ export default function Home() {
             {Array.from({ length: SCAN_LINES }).map((_, i) => (
               <div key={i} style={{ height: 1, background: `rgba(192,132,252,${0.03 + (i % 4) * 0.03})`, margin: "5px auto", borderRadius: 1, width: `${40 + (i * 3.7) % 55}%`, animation: `pulse ${1 + (i % 3) * 0.4}s infinite`, animationDelay: `${i * 0.06}s` }} />
             ))}
-            <div style={{ marginTop: 20, fontSize: 12, color: "#c084fc44" }}>
+            <div style={{ marginTop: 20, fontSize: 12, color: "#c084fcaa" }}>
               {image ? "画像の深層を読み解き中..." : "テキストの深層を読み解き中..."}
             </div>
           </div>
@@ -235,17 +235,17 @@ export default function Home() {
             {/* Emotion core */}
             <div className="fade-up" style={{ textAlign: "center", padding: "36px 24px", marginBottom: 16, border: "1px solid #c084fc22", borderRadius: 8, background: "rgba(0,0,0,0.4)", position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, #c084fc08 0%, transparent 70%)", pointerEvents: "none" }} />
-              <div style={{ fontSize: 10, letterSpacing: "0.3em", color: "#c084fc44", marginBottom: 16 }}>感情の核心</div>
+              <div style={{ fontSize: 10, letterSpacing: "0.3em", color: "#c084fcaa", marginBottom: 16 }}>感情の核心</div>
               <div style={{ fontFamily: "'Zen Antique Soft', serif", fontSize: "clamp(36px, 10vw, 64px)", color: "#c084fc", textShadow: "0 0 40px #c084fc88", marginBottom: 8, letterSpacing: "0.1em" }}>
                 {result.emotionTone}
               </div>
-              <div style={{ fontSize: 12, color: "#ffffff44", letterSpacing: "0.2em" }}>{result.emotionColor}</div>
+              <div style={{ fontSize: 12, color: "#ffffffbb", letterSpacing: "0.2em" }}>{result.emotionColor}</div>
 
               {/* 画像から読み取ったテキスト */}
               {result.extractedText && (
                 <div style={{ marginTop: 16, padding: "10px 14px", border: "1px solid #c084fc15", borderRadius: 6, background: "rgba(192,132,252,0.05)", textAlign: "left" }}>
-                  <div style={{ fontSize: 10, color: "#c084fc44", marginBottom: 4 }}>🖼️ 画像から読み取った情報</div>
-                  <div style={{ fontSize: 12, color: "#c084fc88", lineHeight: 1.7 }}>{result.extractedText}</div>
+                  <div style={{ fontSize: 10, color: "#c084fcaa", marginBottom: 4 }}>🖼️ 画像から読み取った情報</div>
+                  <div style={{ fontSize: 12, color: "#c084fce0", lineHeight: 1.7 }}>{result.extractedText}</div>
                 </div>
               )}
             </div>
@@ -253,24 +253,24 @@ export default function Home() {
             {/* Surface vs Real */}
             <div className="fade-up-1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
               <div style={{ border: "1px solid #64748b33", background: "rgba(100,116,139,0.06)", borderRadius: 6, padding: "16px" }}>
-                <div style={{ fontSize: 10, color: "#64748b", letterSpacing: "0.2em", marginBottom: 10 }}>表面上の言葉</div>
-                <div style={{ fontSize: 13, color: "#94a3b8", lineHeight: 1.7 }}>{result.surfaceMessage}</div>
+                <div style={{ fontSize: 10, color: "#cbd5e1", letterSpacing: "0.2em", marginBottom: 10 }}>表面上の言葉</div>
+                <div style={{ fontSize: 13, color: "#cbd5e1", lineHeight: 1.7 }}>{result.surfaceMessage}</div>
               </div>
               <div style={{ border: "1px solid #c084fc33", background: "rgba(192,132,252,0.06)", borderRadius: 6, padding: "16px" }}>
-                <div style={{ fontSize: 10, color: "#c084fc88", letterSpacing: "0.2em", marginBottom: 10 }}>本当に言いたいこと</div>
+                <div style={{ fontSize: 10, color: "#c084fce0", letterSpacing: "0.2em", marginBottom: 10 }}>本当に言いたいこと</div>
                 <div style={{ fontSize: 13, color: "#e2e8f0", lineHeight: 1.7, fontWeight: 700 }}>{result.realIntent}</div>
               </div>
             </div>
 
             {/* Want to hear */}
             <div className="fade-up-2" style={{ border: "1px solid #818cf833", background: "rgba(129,140,248,0.05)", borderRadius: 6, padding: "18px 20px", marginBottom: 16 }}>
-              <div style={{ fontSize: 10, color: "#818cf877", letterSpacing: "0.2em", marginBottom: 10 }}>💜 本当に言われたいこと</div>
+              <div style={{ fontSize: 10, color: "#818cf8dd", letterSpacing: "0.2em", marginBottom: 10 }}>💜 本当に言われたいこと</div>
               <div style={{ fontSize: 15, color: "#c7d2fe", lineHeight: 1.8, fontWeight: 700 }}>「{result.wantToHear}」</div>
             </div>
 
             {/* Psychology patterns */}
             <div className="fade-up-3" style={{ border: "1px solid #ffffff0a", background: "rgba(0,0,0,0.3)", borderRadius: 6, padding: "20px", marginBottom: 16 }}>
-              <div style={{ fontSize: 10, color: "#ffffff33", letterSpacing: "0.2em", marginBottom: 20 }}>🧠 心理パターン分析</div>
+              <div style={{ fontSize: 10, color: "#ffffffdd", letterSpacing: "0.2em", marginBottom: 20 }}>🧠 心理パターン分析</div>
               {result.psychAnalysis?.map((p, i) => (
                 <div key={i} style={{ marginBottom: 18, opacity: 0, animation: `fadeUp 0.4s ease ${0.4 + i * 0.12}s forwards` }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
@@ -280,7 +280,7 @@ export default function Home() {
                   <div style={{ height: 4, background: "#ffffff07", borderRadius: 2, overflow: "hidden", marginBottom: 6 }}>
                     <div style={{ height: "100%", width: `${p.level}%`, background: `linear-gradient(90deg, ${levelColor(p.level)}55, ${levelColor(p.level)})`, borderRadius: 2, boxShadow: `0 0 8px ${levelColor(p.level)}44`, transition: "width 1.2s ease" }} />
                   </div>
-                  <div style={{ fontSize: 11, color: "#ffffff33" }}>{p.detail}</div>
+                  <div style={{ fontSize: 11, color: "#ffffffdd" }}>{p.detail}</div>
                 </div>
               ))}
             </div>
@@ -288,7 +288,7 @@ export default function Home() {
             {/* Direct message - typewriter, expanded */}
             <div className="fade-up-5 glow-card" style={{ border: "1px solid #c084fc44", background: "rgba(192,132,252,0.05)", borderRadius: 8, padding: "24px 22px", marginBottom: 16, position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, transparent, #c084fc66, transparent)" }} />
-              <div style={{ fontSize: 10, color: "#c084fc66", letterSpacing: "0.25em", marginBottom: 14 }}>◆ AIからあなたへ</div>
+              <div style={{ fontSize: 10, color: "#c084fcd0", letterSpacing: "0.25em", marginBottom: 14 }}>◆ AIからあなたへ</div>
               <div style={{ fontSize: 14, color: "#e2e8f0", lineHeight: 2.1, fontWeight: 300, letterSpacing: "0.04em" }}>
                 {typedMessage}
                 <span style={{ animation: "blink 0.8s step-end infinite", color: "#c084fc" }}>|</span>
@@ -298,7 +298,7 @@ export default function Home() {
             {/* Critics */}
             {result.critics?.length > 0 && (
               <div style={{ border: "1px solid #818cf822", background: "rgba(0,0,0,0.3)", borderRadius: 8, padding: "20px", marginBottom: 16, opacity: 0, animation: "fadeUp 0.6s ease 0.6s forwards" }}>
-                <div style={{ fontSize: 10, color: "#818cf866", letterSpacing: "0.2em", marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ fontSize: 10, color: "#818cf8cc", letterSpacing: "0.2em", marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
                   🎓 専門家の見解
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -310,10 +310,10 @@ export default function Home() {
                           <span style={{ fontSize: 16 }}>{"🧠📚🔬"[i]}</span>
                           <div>
                             <div style={{ fontSize: 13, fontWeight: 700, color: colors[i] }}>{c.name}</div>
-                            <div style={{ fontSize: 10, color: "#ffffff33", marginTop: 1 }}>{c.role}</div>
+                            <div style={{ fontSize: 10, color: "#ffffffdd", marginTop: 1 }}>{c.role}</div>
                           </div>
                         </div>
-                        <div style={{ fontSize: 13, color: "#ffffffaa", lineHeight: 1.9, paddingLeft: 28 }}>
+                        <div style={{ fontSize: 13, color: "#ffffffdd", lineHeight: 1.9, paddingLeft: 28 }}>
                           {c.comment}
                         </div>
                       </div>
@@ -337,7 +337,7 @@ export default function Home() {
           </div>
         )}
 
-        <div style={{ marginTop: 60, textAlign: "center", fontSize: 9, color: "#ffffff0e", letterSpacing: "0.2em" }}>
+        <div style={{ marginTop: 60, textAlign: "center", fontSize: 9, color: "#ffffff55", letterSpacing: "0.2em" }}>
           Groq AI powered · エンターテインメント目的のみ
         </div>
       </div>
